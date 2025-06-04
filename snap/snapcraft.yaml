@@ -49,14 +49,14 @@ slots:
 parts:
   gtk-2-themes:
     plugin: dump
-    source: https://github.com/Kyuyrii/gtk-theme-zorin-snap/releases/download/4.2.2/zorin-desktop-themes-4.2.2.tar.xz
+    source: https://github.com/Kyuyrii/gtk-theme-zorin-snap/releases/download/4.2.2/zorin-desktop-themes-4.2.2.zip
     organize:
       gtk-themes: share/gtk2
     prime:
       - share/gtk2/*/gtk-2.0
   gtk-3-themes:
     plugin: dump
-    source: https://github.com/Kyuyrii/gtk-theme-zorin-snap/releases/download/4.2.2/zorin-desktop-themes-4.2.2.tar.xz
+    source: https://github.com/Kyuyrii/gtk-theme-zorin-snap/releases/download/4.2.2/zorin-desktop-themes-4.2.2.zip
     organize:
       gtk-themes: share/themes
     prime:
