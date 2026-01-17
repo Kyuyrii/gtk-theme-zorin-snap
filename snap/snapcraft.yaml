@@ -1,7 +1,7 @@
 name: gtk-theme-zorin
 build-base: core24
 base: bare
-version: '4.2.2'
+adopt-info: zorin-gtk-themes
 platforms:
   all:
     build-on: [amd64]
@@ -47,18 +47,17 @@ slots:
         - $SNAP/share/themes/ZorinRed-Light
   
 parts:
-  gtk-2-themes:
+  zorin-gtk-themes:
     plugin: dump
-    source: https://github.com/Kyuyrii/gtk-theme-zorin-snap/releases/download/4.2.2/zorin-desktop-themes-4.2.2.zip
-    organize:
-      gtk-themes: share/gtk2
+    source: https://github.com/ZorinOS/zorin-desktop-themes.git
+    override-build: |
+      craftctl default
+      mkdir -p $CRAFT_PART_INSTALL/share/gtk2
+      mkdir -p $CRAFT_PART_INSTALL/share/themes
+      cp -r Zorin* $CRAFT_PART_INSTALL/share/gtk2
+      cp -r Zorin* $CRAFT_PART_INSTALL/share/themes
+      craftctl set version=$(dpkg-parsechangelog -l $CRAFT_PART_INSTALL/debian/changelog -S Version)
     prime:
       - share/gtk2/*/gtk-2.0
-  gtk-3-themes:
-    plugin: dump
-    source: https://github.com/Kyuyrii/gtk-theme-zorin-snap/releases/download/4.2.2/zorin-desktop-themes-4.2.2.zip
-    organize:
-      gtk-themes: share/themes
-    prime:
       - share/themes/*/gtk-3.0
       - share/themes/*/gtk-4.0
