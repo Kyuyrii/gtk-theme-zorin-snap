@@ -19,6 +19,8 @@ slots:
       read:
         - $SNAP/share/gtk2/ZorinBlue-Dark
         - $SNAP/share/gtk2/ZorinBlue-Light
+        - $SNAP/share/gtk2/ZorinBrown-Dark
+        - $SNAP/share/gtk2/ZorinBrown-Light
         - $SNAP/share/gtk2/ZorinGreen-Dark
         - $SNAP/share/gtk2/ZorinGreen-Light
         - $SNAP/share/gtk2/ZorinGrey-Dark
@@ -29,12 +31,16 @@ slots:
         - $SNAP/share/gtk2/ZorinPurple-Light
         - $SNAP/share/gtk2/ZorinRed-Dark
         - $SNAP/share/gtk2/ZorinRed-Light
+        - $SNAP/share/gtk2/ZorinYellow-Dark
+        - $SNAP/share/gtk2/ZorinYellow-Light
   gtk-3-themes:
     interface: content
     source:
       read:
         - $SNAP/share/themes/ZorinBlue-Dark
         - $SNAP/share/themes/ZorinBlue-Light
+        - $SNAP/share/themes/ZorinBrown-Dark
+        - $SNAP/share/themes/ZorinBrown-Light
         - $SNAP/share/themes/ZorinGreen-Dark
         - $SNAP/share/themes/ZorinGreen-Light
         - $SNAP/share/themes/ZorinGrey-Dark
@@ -45,6 +51,8 @@ slots:
         - $SNAP/share/themes/ZorinPurple-Light
         - $SNAP/share/themes/ZorinRed-Dark
         - $SNAP/share/themes/ZorinRed-Light
+        - $SNAP/share/themes/ZorinYellow-Dark
+        - $SNAP/share/themes/ZorinYellow-Light
   
 parts:
   zorin-gtk-themes:
